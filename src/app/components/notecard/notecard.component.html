@@ -1,0 +1,49 @@
+<div class="note-card-main-cntr">
+    <span>Title</span><br/>
+    <span>description</span>
+      <div class="note-card-button-cntr">
+        <button mat-icon-button aria-label="Reminder">
+          <mat-icon svgIcon="reminder-icon"></mat-icon>
+        </button>
+  
+        <button mat-icon-button aria-label="Collaborator">
+          <mat-icon svgIcon="collaborator-icon"></mat-icon>
+        </button>
+  
+        <button mat-icon-button aria-label="Color Palette">
+          <mat-menu #menu="matMenu">
+            <div class="color-palate-cnt">
+              <div class="col1" matTooltip="Default"></div>
+              <div class="col2" matTooltip="Coral"></div>
+              <div class="col3" matTooltip="Peach"></div>
+              <div class="col4" matTooltip="Sand"></div>
+              <div class="col5" matTooltip="Mint"></div>
+              <div class="col6" matTooltip="Sage"></div>
+              <div class="col7" matTooltip="Fog"></div>
+              <div class="col8" matTooltip="Storm"></div>
+              <div class="col9" matTooltip="Dusk"></div>
+              <div class="col10" matTooltip="Blossom"></div>
+              <div class="col11" matTooltip="Clay"></div>
+              <div class="col12" matTooltip="Chalk"></div>
+            </div>
+          </mat-menu>
+          <mat-icon svgIcon="backgroundcolor-icon"></mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Image">
+          <mat-icon svgIcon="img-icon"></mat-icon>
+        </button>
+  
+        <button mat-icon-button aria-label="Archive">
+          <mat-icon svgIcon="archive-icon"></mat-icon>
+        </button>
+  
+        <button mat-icon-button aria-label="More">
+          <mat-menu #more="matMenu">
+            <button mat-menu-item>Delete note</button>
+            <button mat-menu-item>Add Drawing</button>
+          </mat-menu>
+          <mat-icon svgIcon="more-icon"></mat-icon>
+        </button>
+      </div>
+  </div>
+

@@ -1,0 +1,115 @@
+/* login.component.scss */
+.login-main-container-cnt {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+  }
+  .login-container-cnt {
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-container-cnt h2 {
+    color: #ffc107;
+    margin: 0;
+  }
+  
+  .login-container-cnt h3 {
+    margin: 10px 0;
+  }
+  
+  .login-container-cnt p {
+    margin: 0;
+  }
+  
+  .login-container-cnt form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .login-full-width-cnt {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .login-links-cnt {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .login-links-cnt a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: smaller;
+  }
+  
+  .login-links-cnt a:hover {
+    text-decoration: underline;
+  }
+  
+  .login-links-cnt a:first-child {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .login-links-cnt div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .login-footer-cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .login-language-selector-cnt {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .login-language-selector-cnt select {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .login-footer-links-cnt {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .login-footer-links-cnt a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-footer-links-cnt a:hover {
+    text-decoration: underline;
+  }
+  
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  

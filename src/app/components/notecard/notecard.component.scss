@@ -1,0 +1,125 @@
+.note-card-main-cntr {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 250px;
+    height: 120px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    &:hover {
+      .note-card-button-cntr,.notecared-pin-icon {
+        visibility: visible;
+      }
+    }
+  }
+  
+  .note-card-button-cntr {
+    margin-top: 50px;
+    visibility: hidden;
+  }
+
+  .notecared-pin-icon{
+   margin-left: 100px;
+    visibility: hidden;
+  }
+.col1{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+
+}
+  
+.col2{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #FFF8B8;
+    border: 1px solid #FFF8B8;
+
+}
+.col3{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #E2F6D3;
+  border: 1px solid #E2F6D3;
+}
+
+.col4{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #B4DDD3;
+    border: 1px solid #B4DDD3;
+
+}
+.col4{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #D4E4ED;
+  border: 1px solid #D4E4ED;
+}
+
+
+.col5{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #AECCDC;
+  border: 1px solid #AECCDC;
+}
+.col6{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #D3BFDB;
+  border: 1px solid #D3BFDB;
+
+}
+
+.col7{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #F6E2DD;
+    border: 1px solid #F6E2DD;
+
+}
+.col8{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #E9E3D4;
+  border: 1px solid #E9E3D4;
+
+}
+.col9{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #EFEFF1;
+  border: 1px solid #EFEFF1;
+}
+.col10{
+  border-radius: 200px;
+  height: 50px;
+  width:50px;
+  background-color: #c15a58;
+  border: 1px solid #c15a58;
+}
+.color-palate-cnt{
+  width:270px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
+  &:hover {
+    .note-card-button-cntr,.notecared-pin-icon {
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.signup-main-container-cnt{
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .signup-container-cnt {
+    background-color: #fff;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .signup-form-container-cnt {
+    width: 60%;
+  }
+  
+  .signup-form-container-cnt h2 {
+    color: #ffc107;
+  }
+  
+  .signup-form-container-cnt h3 {
+    margin: 0;
+  }
+  
+  .signup-form-container-cnt form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: fit-content;
+  }
+  
+  .signup-form-container-cnt form p {
+    font-size: smaller;
+    font-weight: bold;
+    width: 100%;
+  }
+  
+  .signup-half-width-cnt {
+    margin-top: 20px;
+  }
+  
+  .signup-full-width-cnt {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .half-width{
+    width: 100%;
+  }
+  
+  .signup-links-cnt {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    width: 100%;
+  }
+  
+  .signup-links-cnt a {
+    font-size: 14px;
+    color: #0068d6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-links-cnt a:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-links-cnt button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3f51b6;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .signup-image-container-cnt {
+    margin-left: 10px;
+    text-align: center;
+    width: min-content;
+  }
+  
+  .signup-image-container-cnt img {
+    margin-top: 20px;
+    width: 350px;
+    height: auto;
+  }
+  
+  .signup-image-container-cnt h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0 30px;
+  }
+  
+  .signup-footer-cnt {
+    margin-top: 5px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .signup-footer-cnt select {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .signup-footer-links-cnt {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .signup-footer-links-cnt a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .signup-footer-links-cnt a:hover {
+    text-decoration: underline;
+  }
+  
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }

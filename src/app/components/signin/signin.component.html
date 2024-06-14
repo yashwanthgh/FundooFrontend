@@ -1,0 +1,72 @@
+<div class="login-main-container-cnt">
+    <div class="login-container-cnt">
+      <h2>Fundo</h2>
+      <h3>Sign in</h3>
+      <p>Use your Fundo Account</p>
+      <form action="/signin" method="post" [formGroup]="singinForm">
+        <mat-form-field appearance="outline" class="login-full-width-cnt">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            type="text"
+            formControlName="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </mat-form-field>
+        <mat-error *ngIf="submitted && signinControll['email']?.hasError('required')">Email required</mat-error>
+        <mat-error *ngIf="submitted && signinControll['email']?.hasError('email')">Incorrect Email Format</mat-error>
+        <mat-form-field appearance="outline" class="login-full-width-cnt">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            formControlName="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </mat-form-field>
+        <mat-error
+          *ngIf="submitted && signinControll['password']?.hasError('required')"
+          >Password required</mat-error
+        >
+        <mat-error
+          *ngIf="submitted && signinControll['password']?.hasError('minlength')"
+          >Minimum Length of 6 required</mat-error
+        >
+        <div class="login-links-cnt">
+          <a href="/forgot-password">Forgot password</a>
+          <div>
+            <button routerLink="signup" color="primary">Create Account</button>
+            <button
+              (click)="handleSignin()"
+              mat-raised-button
+              color="primary"
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="login-footer-cnt">
+      <div class="login-language-selector-cnt">
+        <select name="language" id="language">
+          <option value="en">English (United States)</option>
+          <option value="es">Español (España)</option>
+          <option value="fr">Français (France)</option>
+          <option value="de">Deutsch</option>
+          <option value="zh">中文 (简体)</option>
+        </select>
+      </div>
+      <div class="login-footer-links-cnt">
+        <a href="/help">Help</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+  </div>
+  

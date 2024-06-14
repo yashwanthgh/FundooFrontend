@@ -1,0 +1,100 @@
+<div class="signup-main-container-cnt">
+    <div class="signup-container-cnt">
+      <div class="signup-form-container-cnt">
+        <h2>Fundo</h2>
+        <h3>Create your Fundo Account</h3>
+        <form [formGroup]="signupForm" (ngSubmit)="handleSignup()">
+          <div class="signup-half-width-cnt">
+            <mat-form-field appearance="outline" class=".half-width">
+              <mat-label>First Name</mat-label>
+              <input
+                matInput
+                type="text"
+                formControlName="firstName"
+                placeholder="First Name*"
+                required
+              />
+            </mat-form-field>
+            <mat-error *ngIf="submitted && signupControll['firstName']?.hasError('required')">First Name required</mat-error>
+          </div>
+  
+          <div class="signup-half-width-cnt" >
+            <mat-form-field appearance="outline" class=".half-width">
+              <mat-label>Last Name</mat-label>
+              <input
+                matInput
+                type="text"
+                formControlName="lastName"
+                placeholder="Last Name*"
+                required
+              />
+            </mat-form-field>
+            <mat-error *ngIf="submitted && signupControll['lastName']?.hasError('required')">Last Name required</mat-error>
+          </div>
+  
+          <div class="signup-full-width-cnt">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Username or Email</mat-label>
+              <input matInput formControlName="email" placeholder="Username or Email"/>
+            </mat-form-field>
+            <mat-error *ngIf="submitted && signupControll['email']?.hasError('required')">Email required</mat-error>
+            <mat-error *ngIf="submitted && signupControll['email']?.hasError('email')">Incorrect Email Format</mat-error>
+            <p>You can use letters, numbers & periods</p>
+          </div>
+  
+          <div class="signup-half-width-cnt">
+            <mat-form-field appearance="outline" class=".half-width">
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                type="password"
+                formControlName="password"
+                placeholder="Password*"
+                required
+              />
+            </mat-form-field>
+            <mat-error *ngIf="submitted && signupControll['password']?.hasError('required')">Password required</mat-error>
+            <mat-error *ngIf="submitted && signupControll['password']?.hasError('minlength')">Password must be 6 characters</mat-error>
+          </div>
+  
+          <div class="signup-half-width-cnt">
+            <mat-form-field appearance="outline" class=".half-width">
+              <mat-label>Confirm Password</mat-label>
+              <input
+                matInput
+                type="password"
+                formControlName="confirmpassword"
+                placeholder="Confirm*"
+                required
+              />
+            </mat-form-field>
+            <mat-error *ngIf="submitted && signupControll['confirmpassword']?.hasError('required')">Password required</mat-error>
+            <mat-error *ngIf="submitted && signupControll['confirmpassword']?.hasError('minlength')">Password must be 6 characters</mat-error>
+          </div>
+          <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
+          <div class="signup-links-cnt">
+            <button routerLink="signin">Signin instead</button> 
+            <button mat-raised-button color="primary" type="submit"> Register </button>
+          </div>
+        </form>
+      </div>
+      <div class="signup-image-container-cnt">
+        <img src="./assets/images/icon.jpg" alt="Fundo Image" />
+        <h3>One account. All of Fundo working for you.</h3>
+      </div>
+    </div>
+    <div class="signup-footer-cnt">
+      <select name="language" id="language">
+        <option value="en">English (United States)</option>
+        <option value="es">Español (España)</option>
+        <option value="fr">Français (France)</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文 (简体)</option>
+      </select>
+      <div class="signup-footer-links-cnt">
+        <a href="/help">Help</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+  </div>
