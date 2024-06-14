@@ -1,0 +1,32 @@
+.icon-cnt{
+    display: flex;
+    flex-direction: column;
+   
+}
+.sidenav-main-cnt{
+    display : flex;
+    flex-direction: column;
+    width : 150px;
+    padding: 10px;
+    
+}
+.span-data-cnt{
+    padding: 10px;
+}
+
+.icons-cnt
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+.sidenav-drawer-content{
+    display: flex;
+     width: 100%;
+}
+
+.router-outlet-cnt{
+   
+   width: 95%;
+}

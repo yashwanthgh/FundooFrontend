@@ -15,4 +15,8 @@ export class HttpService {
   signupApi(data:any){
     return this.httpClient.post("http://localhost:5188/api/register", data);
   }
+
+  NotesApi(endpoint:string){
+    return this.httpClient.get("http://localhost:5188/api/notes");
+  }
 }

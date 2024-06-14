@@ -1,0 +1,39 @@
+<div>
+  <mat-toolbar color="white">
+    <mat-toolbar-row>
+      <!-- Left Section -->
+      <button mat-icon-button aria-label="menu" (click)="handelDrawerClick()">
+        <mat-icon svgIcon="menu-icon"></mat-icon>
+      </button>
+      <img class="keep-pic" src="assets/images/keep.png" />
+      <div class="middle-section">
+        <button mat-icon-button aria-label="search">
+          <mat-icon svgIcon="search-icon"></mat-icon>
+        </button>
+        <input type="text" class="search-input" placeholder="Search..." />
+      </div>
+
+      <!-- Right Section -->
+      <div class="icon-elements">
+        <button mat-icon-button aria-label="refresh">
+          <mat-icon svgIcon="refresh-icon"></mat-icon>
+        </button>
+        <button mat-icon-button aria-label="list">
+          <mat-icon svgIcon="list-icon"></mat-icon>
+        </button>
+        <button mat-icon-button aria-label="settings">
+          <mat-icon svgIcon="setting-icon"></mat-icon>
+        </button>
+        <button mat-icon-button aria-label="apps">
+          <mat-icon svgIcon="apps-icon"></mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="icon">
+          <mat-menu #icon="matMenu">
+            <button mat-menu-item>Logout</button>
+          </mat-menu>
+          <span class="google_icon">YV</span>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
