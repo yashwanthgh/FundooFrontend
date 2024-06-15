@@ -22,6 +22,7 @@ export class NotescontainerComponent implements OnInit {
       (err) => console.log(err)
     );
   }
+
   handleUpdateNotesList($event: any) {
     console.log($event);
     if ($event.action == 'addNotes') {
@@ -37,9 +38,7 @@ export class NotescontainerComponent implements OnInit {
           return $event.data 
         }
         return note
-
       })
     }
   }
-
 }

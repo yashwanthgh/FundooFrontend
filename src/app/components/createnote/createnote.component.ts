@@ -89,6 +89,10 @@ export class CreatenoteComponent {
 
   handleCreateNote() {
     this.createNote = !this.createNote;
+    // if their is a value then only call the api to create note
+    // Add api to create note 
+    // make title and description empty again
+    this.updateList.emit({title:this.title, description:this.description});
     console.log(this.title);
   }
 }

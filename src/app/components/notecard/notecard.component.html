@@ -1,7 +1,7 @@
-<div class="note-card-main-cntr">
-    <span>Title</span><br/>
-    <span>description</span>
-      <div class="note-card-button-cntr">
+<div class="note-card-main-cntr" *ngFor="let note of listOfNotes">
+    <span>{{note.title}}</span><br/>
+    <span>{{note.description}}</span>
+      <div class="note-card-button-cntr" >
         <button mat-icon-button aria-label="Reminder">
           <mat-icon svgIcon="reminder-icon"></mat-icon>
         </button>

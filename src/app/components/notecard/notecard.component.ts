@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { NOTE_ICON, REMINDER_ICON, EDIT_ICON, ARCHIVE_ICON, TRASH_ICON, COLLABRATOR_ICON, TICK_ICON, BRUSH_ICON, UNDO_ICON, REDO_ICON, IMG_ICON, MORE_ICON, COLOR_PALATTE_ICON, PIN_ICON } from 'src/assets/svg-icons';
@@ -9,7 +9,9 @@ import { NOTE_ICON, REMINDER_ICON, EDIT_ICON, ARCHIVE_ICON, TRASH_ICON, COLLABRA
   styleUrls: ['./notecard.component.scss']
 })
 export class NotecardComponent {
-
+  
+  @Input() listOfNotes: any[] = [];
+  
   constructor( iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private vcr: ViewContainerRef) {
 
     iconRegistry.addSvgIconLiteral("note-icon", sanitizer.bypassSecurityTrustHtml(NOTE_ICON))
