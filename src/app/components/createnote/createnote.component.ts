@@ -1,3 +1,4 @@
+import { NoteService } from 'src/app/services/noteservice/note.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -27,8 +28,11 @@ export class CreatenoteComponent {
   createNote: boolean = true;
   title: string = '';
   description: string = '';
+  noteService!: NoteService;
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, noteService:NoteService) {
+    this.noteService= noteService;
+    
     iconRegistry.addSvgIconLiteral(
       'note-icon',
       sanitizer.bypassSecurityTrustHtml(NOTE_ICON)
@@ -89,11 +93,21 @@ export class CreatenoteComponent {
 
   handleCreateNote() {
     this.createNote = !this.createNote;
-    // if their is a value then only call the api to create note
-    // Add api to create note 
-    // make title and description empty again
-    this.updateList.emit({title:this.title, description:this.description});
-    console.log(this.title);
+    if(this.title || this.description){
+
+      this.noteService.addNotesApi({
+        title:this.title,
+        description:this.description,
+        colour:"#ffffff",
+        isArchived:false,
+        isDeleted:false})
+      .subscribe((res)=>{ this.updateList.emit({data:{title:this.title,description:this.description,colour:"#ffffff",
+      isArchived:false,
+      isDeleted:false},action:'addNote',});
+      this.title = "";
+      this.description ="";
+     } );
+    }
   }
 }
 
