@@ -101,7 +101,8 @@ export class CreatenoteComponent {
         colour:"#ffffff",
         isArchived:false,
         isDeleted:false})
-      .subscribe((res)=>{ this.updateList.emit({data:{title:this.title,description:this.description,colour:"#ffffff",
+        
+      .subscribe((res)=>{ console.log(res), this.updateList.emit({data:{title:this.title,description:this.description,colour:"#ffffff", //
       isArchived:false,
       isDeleted:false},action:'addNote',});
       this.title = "";

@@ -16,9 +16,9 @@ export class NoteService {
   }
 
   archiveNotes(data:any){
-    return this.httpService.archiveNotesApi(`/Note/isarchived?NoteId=${data}`)
+    return this.httpService.archiveNotesApi()
   }
   trashNotes(data:any){
-    return this.httpService.archiveNotesApi(`/Note/istrashed?NoteId=${data}`)
+    return this.httpService.archiveNotesApi()
   }
 }

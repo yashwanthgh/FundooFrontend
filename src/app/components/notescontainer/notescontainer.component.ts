@@ -26,7 +26,7 @@ export class NotescontainerComponent implements OnInit {
   handleUpdateNotesList($event: any) {
     console.log($event);
     if ($event.action == 'addNotes') {
-      this.notesList.push($event);
+      this.notesList.push($event.data); 
     } else if ($event.action == 'archive' || $event.action == 'trash') {
       this.notesList = this.notesList.filter(
         (note: any) => note.noteId != $event.data.noteId

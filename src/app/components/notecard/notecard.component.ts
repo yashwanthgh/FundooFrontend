@@ -41,11 +41,11 @@ export class NotecardComponent {
   handleNoteIconsClickNote(value:any,action:string,colour?:string){
     if(action =='archive' || action =='unarchive'){
 
-     this.notesService.archiveNotes(value.noteId).subscribe((res) => this.updateList.emit({ value,action}));
+     this.notesService.archiveNotes(value.noteId).subscribe((res) => this.updateList.emit({data: value,action}));
     }
     else if(action =='trash' || action == 'restore'){
 
-      this.notesService.trashNotes(value.noteId).subscribe((res) => this.updateList.emit({ value,action}));
+      this.notesService.trashNotes(value.noteId).subscribe((res) => this.updateList.emit({data: value,action}));
      }
     else{
       // this.notesService.colorApi(value.noteId).subscribe((res) => 
