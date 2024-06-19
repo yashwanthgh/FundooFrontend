@@ -23,6 +23,8 @@ import { TrashcontainerComponent } from './components/trashcontainer/trashcontai
 import { ArchivecontainerComponent } from './components/archivecontainer/archivecontainer.component';
 import { CreatenoteComponent } from './components/createnote/createnote.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditnoteComponent } from './components/editnote/editnote.component';
+import { SearchPipe } from './pipe/search.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     NotescontainerComponent,
     TrashcontainerComponent,
     ArchivecontainerComponent,
-    CreatenoteComponent
+    CreatenoteComponent,
+    EditnoteComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

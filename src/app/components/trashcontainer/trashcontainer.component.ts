@@ -18,10 +18,8 @@ export class TrashcontainerComponent implements OnInit {
       console.log('all notes',this.trashNotesList.data);
       this.trashNotesList=this.trashNotesList.data.filter((note:any)=>{
         return note.isDeleted===true;
-        
       })
       console.log('trashed',this.trashNotesList);
-      
       })
       
     }

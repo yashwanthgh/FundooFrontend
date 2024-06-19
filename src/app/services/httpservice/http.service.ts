@@ -21,7 +21,7 @@ export class HttpService {
   }
 
   NotesApi() {
-    return this.httpClient.get('http://localhost:5188/api/notes', {headers: this.authHeader});
+    return this.httpClient.get('http://localhost:5188/api/getAllNotes', {headers: this.authHeader});
   }
 
   createNotesApi(data: any) {
@@ -30,6 +30,6 @@ export class HttpService {
   }
 
   archiveNotesApi(){
-    return this.httpClient.put('http://localhost:5188/api/archiveNote', {}, {headers: this.authHeader});
+    return this.httpClient.put('http://localhost:5188/api/getArchivedNote', {}, {headers: this.authHeader});
   }
 }

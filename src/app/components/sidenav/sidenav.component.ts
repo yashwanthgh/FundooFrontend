@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
@@ -10,7 +10,7 @@ import { NOTE_ICON, REMINDER_ICON, EDIT_ICON, ARCHIVE_ICON, TRASH_ICON } from 's
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent implements OnInit, OnDestroy {
 
   drawerState:boolean=false
   subscription!:Subscription
@@ -26,5 +26,9 @@ export class SidenavComponent implements OnInit {
    ngOnInit(){
     this.dataService.currentDrawerState.subscribe((res) => this.drawerState = res)
    }
+
+   ngOnDestroy(){
+    this.subscription.unsubscribe();
+ }
 
 }

@@ -15,9 +15,11 @@ export class NotescontainerComponent implements OnInit {
   ngOnInit() {
     this.notesService.getNotesApi().subscribe(
       (res: any) => {
+        console.log(res);
         this.notesList = res.data.filter(
-          (note: any) => note.isArchived == false && note.isDeleted == false
+          (note: any) => note.isArchived === false && note.isDeleted === false
         );
+        console.log(this.notesList)
       },
       (err) => console.log(err)
     );

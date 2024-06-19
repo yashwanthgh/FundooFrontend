@@ -1,4 +1,4 @@
-<div class="note-card-main-cntr" *ngFor="let note of listOfNotes">
+<div class="note-card-main-cntr" *ngFor="let note of listOfNotes | search: 'sanchi' " >
     <span>{{note.title}}</span><br/>
     <span>{{note.description}}</span>
       <div class="note-card-button-cntr" >
@@ -11,7 +11,7 @@
         </button>
   
         <button mat-icon-button aria-label="Color Palette">
-          <mat-menu #menu="matMenu">
+          <mat-menu #menu="matMenu"> 
             <div class="color-palate-cnt">
               <div class="col1" matTooltip="Default"></div>
               <div class="col2" matTooltip="Coral"></div>

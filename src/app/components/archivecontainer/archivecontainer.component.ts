@@ -8,19 +8,17 @@ import { NoteService } from 'src/app/services/noteservice/note.service';
 })
 export class ArchivecontainerComponent implements OnInit {
   archiveNotesList: any = [];
-  filtered: any = [];
-  note: any = [];
 
   constructor(private notesService: NoteService) {}
 
   ngOnInit(): void {
     this.notesService.getNotesApi().subscribe((res) => {
-      this.filtered = res;
-      console.log('all botes', this.filtered.data);
-      this.archiveNotesList = this.filtered.data.filter((note: any) => {
-        return note.isArchived === true && note.isDeleted === false;
+      this.archiveNotesList = res;
+      console.log('all notes', this.archiveNotesList.data);
+      this.archiveNotesList = this.archiveNotesList.data.filter((note: any) => {
+        return note.isArchived === true;
       });
-      console.log('filterd', this.archiveNotesList);
+      console.log('archived', this.archiveNotesList);
     });
   }
   handleUpdateNotesList($event: any) {

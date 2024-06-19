@@ -6,6 +6,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { TrashcontainerComponent } from './components/trashcontainer/trashcontainer.component';
 import { NotescontainerComponent } from './components/notescontainer/notescontainer.component';
+import { AuthgardService } from './services/authard/authgard.service';
 
 const routes: Routes = [
   {
@@ -17,13 +18,14 @@ const routes: Routes = [
     component:SigninComponent
   },
   {
-    path:"dashbord",
+    path:"dashboard",
     component:DashbordComponent,
     children:[
       {path:"notes",component:NotescontainerComponent},
       {path:"archive",component:ArchivecontainerComponent},
       {path:"trash",component:TrashcontainerComponent},
-    ]
+    ],
+    canActivate: [AuthgardService]
   }
 ];
 

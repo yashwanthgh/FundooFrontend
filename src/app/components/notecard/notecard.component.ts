@@ -14,10 +14,8 @@ import { NOTE_ICON, REMINDER_ICON, EDIT_ICON, ARCHIVE_ICON, TRASH_ICON, COLLABRA
 export class NotecardComponent {
   @Output() updateList = new EventEmitter();
   @Input() listOfNotes: any[] = [];
-  @Input() notesData:any[]=[]
   @Input() container: string = "notes"
-  archiveNotesList:[]=[];
-  searchString:string=''
+  archiveNotesList: any[]=[];
   subscription!:Subscription
   
   constructor( iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private vcr: ViewContainerRef, private notesService:NoteService,private  dataService:DataService) {
@@ -48,10 +46,8 @@ export class NotecardComponent {
       this.notesService.trashNotes(value.noteId).subscribe((res) => this.updateList.emit({data: value,action}));
      }
     else{
-      // this.notesService.colorApi(value.noteId).subscribe((res) => 
         this.updateList.emit({data:{...value, colour:colour},action});
     }
-
   }
 
 }
